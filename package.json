@@ -2,7 +2,7 @@
   "name": "common-utils",
   "version": "0.1.0",
   "description": "antd components library",
-  "author": "deployer",
+  "author": "xiaoxiaoyuanwang",
   "private": false,
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -15,6 +15,14 @@
     "公共",
     "公共",
     "常用"
+  ],
+  "homepage": "https://github.com/xiaoxiaoyuanwang/common-utils.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xiaoxiaoyuanwang/common-utils.git"
+  },
+  "files": [
+    "dist"
   ],
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
