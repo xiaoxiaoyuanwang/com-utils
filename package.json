@@ -1,6 +1,6 @@
 {
   "name": "comm-utils",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "antd components library",
   "author": "xiaoxiaoyuanwang",
   "private": false,
@@ -11,10 +11,7 @@
   "keywords": [
     "React",
     "js",
-    "公共方法",
-    "公共",
-    "公共",
-    "常用"
+    "开发中常用的公共方法"
   ],
   "homepage": "https://github.com/xiaoxiaoyuanwang/comm-utils.git",
   "repository": {

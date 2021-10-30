@@ -7,7 +7,7 @@
 ```
 npm install comm-utils -S
 
-import commUtils from "comm-utils";
+import * as commUtils from "comm-utils";
 ```
 
 ## 数组-字符串转换方法
