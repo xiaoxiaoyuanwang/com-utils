@@ -84,3 +84,11 @@ export function backFormatDate(t, dtFormat) {
         }
     }
 }
+/*
+  传入日期，返回moment格式的日期
+  dtFormat: 时间格式，默认"YYYY-MM-DD"（可选）
+*/
+export function backFormatMoment(t, dtFormat) {
+    if (dtFormat === void 0) { dtFormat = formatDate; }
+    return t ? moment(t, dtFormat) : t;
+}

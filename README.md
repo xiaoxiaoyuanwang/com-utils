@@ -5,9 +5,9 @@
 
 ## 安装并引入组件
 ```
-npm install common-utils -S
+npm install com-utils -S
 
-import { checkTypeBackArray, checkTypeBackString } from "common-utils";
+import { checkTypeBackArray, checkTypeBackString } from "com-utils";
 ```
 
 ## 数组-字符串转换方法
