@@ -1,5 +1,5 @@
 {
-  "name": "com-utils",
+  "name": "common_utils",
   "version": "0.1.0",
   "description": "antd components library",
   "author": "xiaoxiaoyuanwang",
@@ -16,10 +16,10 @@
     "公共",
     "常用"
   ],
-  "homepage": "https://github.com/xiaoxiaoyuanwang/com-utils.git",
+  "homepage": "https://github.com/xiaoxiaoyuanwang/common_utils.git",
   "repository": {
     "type": "git",
-    "url": "https://github.com/xiaoxiaoyuanwang/com-utils.git"
+    "url": "https://github.com/xiaoxiaoyuanwang/common_utils.git"
   },
   "files": [
     "dist"
