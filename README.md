@@ -5,9 +5,9 @@
 
 ## 安装并引入组件
 ```
-npm install common_utils -S
+npm install comm_utils -S
 
-import { checkTypeBackArray, checkTypeBackString } from "common_utils";
+import commUtils from "comm_utils";
 ```
 
 ## 数组-字符串转换方法
@@ -15,22 +15,22 @@ import { checkTypeBackArray, checkTypeBackString } from "common_utils";
 /*
 将传入数据转换成数组并返回, separa：截取分隔符，默认“,”分割（可选）
 */
-let resStr = checkTypeBackArray(str, separa)
+let resStr = commUtils.checkTypeBackArray(str, separa)
 ```
 | 输入 | 输出 |
 | --------- | --------- |
-| checkTypeBackArray('1,2,3,4')| ["1","2","3","4"]
-| checkTypeBackArray("1;2;3;4", ";")| ["1","2","3","4"]
+| commUtils.checkTypeBackArray('1,2,3,4')| ["1","2","3","4"]
+| commUtils.checkTypeBackArray("1;2;3;4", ";")| ["1","2","3","4"]
 ```
 /*
 将传入数据转换成字符串并返回, separa：截取分隔符，默认“,”拼接（可选）
 */
-let resArr = checkTypeBackString(arr, separa?)
+let resArr = commUtils.checkTypeBackString(arr, separa?)
 ```
 | 输入 | 输出 |
 | --------- | --------- |
-| checkTypeBackString([1,2,3,4])| "1,2,3,4"
-| checkTypeBackString([1,2,3,4], ";")| "1;2;3;4"
+| commUtils.checkTypeBackString([1,2,3,4])| "1,2,3,4"
+| commUtils.checkTypeBackString([1,2,3,4], ";")| "1;2;3;4"
 
 
 ## 时间-常用转化方法
@@ -40,10 +40,10 @@ let resArr = checkTypeBackString(arr, separa?)
 import { DatePicker } from "antd";
 
 /*
-禁止选择星期天--disableDateWeek(e)
+禁止选择星期天--commUtils.disableDateWeek(e)
 */
 <DatePicker
-  disabledDate={e => disableDateWeek(e)}
+  disabledDate={e => commUtils.disableDateWeek(e)}
 />
 ```
 
@@ -56,13 +56,13 @@ endDt: 结束日期（可选）
 disBeforeToday: 选择今天之前的日期，默认false（可选）
 dtFormat: 时间格式，默认“YYYY-MM-DD”（可选）
 */
-开始日期使用--disabledStartDt(e, startDt, endDt, disBeforeToday, dtFormat)
-结束日期使用--disabledEndDt(e, startDt, endDt, disBeforeToday, dtFormat)
+开始日期使用--commUtils.disabledStartDt(e, startDt, endDt, disBeforeToday, dtFormat)
+结束日期使用--commUtils.disabledEndDt(e, startDt, endDt, disBeforeToday, dtFormat)
 <DatePicker
-  disabledDate={e => disabledStartDt(e, startDate, endDate)}
+  disabledDate={e => commUtils.disabledStartDt(e, startDate, endDate)}
 />
 <DatePicker
-  disabledDate={e => disabledEndDt(e, startDate, endDate)}
+  disabledDate={e => commUtils.disabledEndDt(e, startDate, endDate)}
 />
 ```
 
@@ -73,7 +73,7 @@ dtFormat: 时间格式，默认“YYYY-MM-DD”（可选）
   t: 不穿返回原数据， t=today返回当前日期（可选）
   dtFormat: 时间格式，默认"YYYY-MM-DD"（可选）
 */
-backFormatDate(t, dtFormat)
+commUtils.backFormatDate(t, dtFormat)
 ```
 
 ### 传入日期，返回moment格式的日期
@@ -82,7 +82,7 @@ backFormatDate(t, dtFormat)
   传入日期，返回指定格式的日期
   dtFormat: 时间格式，默认"YYYY-MM-DD"（可选）
 */
-backFormatMoment(t, dtFormat)
+commUtils.backFormatMoment(t, dtFormat)
 ```
 
 ## 对象-常用转化方法
@@ -91,7 +91,7 @@ backFormatMoment(t, dtFormat)
 ```
 /*
   判断对象多层结构数据是否存在、 不存在返回undefined
-  let KM_TEMPNOTICE_RECONSITU = checkHasData(obj, ['OA_TACASEMGTAPPROVE', 'XML4CLOBINFO', 'CLOBINFO', 'KM_TEMPNOTICE_RECONSITU'])
+  let KM_TEMPNOTICE_RECONSITU = commUtils.checkHasData(obj, ['OA_TACASEMGTAPPROVE', 'XML4CLOBINFO', 'CLOBINFO', 'KM_TEMPNOTICE_RECONSITU'])
 */
 ```
 
@@ -109,13 +109,13 @@ backFormatMoment(t, dtFormat)
     a: 11,
     b: 2
   }
-  compareDataBlur(objPrep, objNew)
+  commUtils.compareDataBlur(objPrep, objNew)
 */
 ```
 | 输入 | 输出 |
 | --------- | --------- |
-| compareDataBlur(objPrep, objNew)| false
-| compareDataBlur(objPrep, objNew, ["a"])| true
+| commUtils.compareDataBlur(objPrep, objNew)| false
+| commUtils.compareDataBlur(objPrep, objNew, ["a"])| true
 
 ### 输入正数限制，解析不出来返回undefined
 ```
@@ -124,7 +124,7 @@ backFormatMoment(t, dtFormat)
 建议onChange方法使用
 input输入数字限制e(value)
 dotNum(小数位数) (可选)
-inputOnlyNumber(e, dotNum = 2)
+commUtils.inputOnlyNumber(e, dotNum = 2)
 */
 ```
 
@@ -132,7 +132,7 @@ inputOnlyNumber(e, dotNum = 2)
 ```
 /*
 数字改千位分割
-changeToThousand(num)
+commUtils.changeToThousand(num)
 */
 ```
 
@@ -140,7 +140,7 @@ changeToThousand(num)
 ```
 /*
 千位字符串转正常数字
-stringToThousand(num)
+commUtils.stringToThousand(num)
 */
 ```
 
@@ -148,7 +148,7 @@ stringToThousand(num)
 ```
 /*
 判断指是否为空 空位false 不为空为true
-notNull(value)
+commUtils.notNull(value)
 */
 ```
 
@@ -162,5 +162,5 @@ objKey 不存在直接设置到obj={ key: 'a'}，this.state.a = '1'
 type类型time、inputNumber，剩下的走默认 (可选)
 cd回掉 (可选)
 */
-changeFun(e, _this, obj, type, cd)
+commUtils.changeFun(e, _this, obj, type, cd)
 ```

@@ -1,51 +1,51 @@
 import React, { useState } from 'react'
 import { Button, Card, Divider } from "antd";
 import { storiesOf } from '@storybook/react';
-import { checkTypeBackArray, checkTypeBackString } from './arrays';
+import commUtils from './index';
 const defaultComponent = () => {
   const [dt, setDt] = useState(null)
   return <React.Fragment>
     <Card title="将传入数据转换成数组并返回">
-      {'checkTypeBackArray("1,2,3,4")'}
+      {'commUtils.checkTypeBackArray("1,2,3,4")'}
       <br />
       <Button
         type="primary"
         onClick={()=>{
-          console.log('checkTypeBackArray("1,2,3,4")', checkTypeBackArray("1,2,3,4"));
+          console.log('commUtils.checkTypeBackArray("1,2,3,4")', commUtils.checkTypeBackArray("1,2,3,4"));
         }}
       >
         点击在console查看
       </Button>
       <Divider />
-      {'checkTypeBackArray("1;2;3;4", ";")'}
+      {'commUtils.checkTypeBackArray("1;2;3;4", ";")'}
       <br />
       <Button
         type="primary"
         onClick={()=>{
-          console.log('checkTypeBackArray("1;2;3;4", ";")', checkTypeBackArray("1;2;3;4", ";"));
+          console.log('commUtils.checkTypeBackArray("1;2;3;4", ";")', commUtils.checkTypeBackArray("1;2;3;4", ";"));
         }}
       >
         点击在console查看
       </Button>
     </Card>
     <Card title="将传入数据转换成字符串并返回">
-      {'checkTypeBackString([1,2,3,4])'}
+      {'commUtils.checkTypeBackString([1,2,3,4])'}
       <br />
       <Button
         type="primary"
         onClick={()=>{
-          console.log('checkTypeBackString([1,2,3,4])', checkTypeBackString([1,2,3,4]));
+          console.log('commUtils.checkTypeBackString([1,2,3,4])', commUtils.checkTypeBackString([1,2,3,4]));
         }}
       >
         点击在console查看
       </Button>
       <Divider />
-      {'checkTypeBackString([1,2,3,4], ";")'}
+      {'commUtils.checkTypeBackString([1,2,3,4], ";")'}
       <br />
       <Button
         type="primary"
         onClick={()=>{
-          console.log('checkTypeBackString([1,2,3,4], ";")', checkTypeBackString([1,2,3,4], ";"));
+          console.log('commUtils.checkTypeBackString([1,2,3,4], ";")', commUtils.checkTypeBackString([1,2,3,4], ";"));
         }}
       >
         点击在console查看

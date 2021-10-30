@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import { Button, Card, Divider, Input } from "antd";
-import { storiesOf } from '@storybook/react'
-import { inputOnlyNumber, changeToThousand, stringToThousand } from './numbers';
+import { storiesOf } from '@storybook/react';
+import commUtils from './index';
 const defaultComponent = () => {  
   const [numberVal, setNumberVal] = useState();
   const [numberValThousand, setNumberValThousand] = useState();
@@ -11,7 +11,7 @@ const defaultComponent = () => {
       <Input
         style={{width: 200, marginRight: 20}}
         onChange={(e)=>{
-          setNumberVal(inputOnlyNumber(e.target.value))
+          setNumberVal(commUtils.inputOnlyNumber(e.target.value))
         }}
         value={numberVal}
       />
@@ -28,7 +28,7 @@ const defaultComponent = () => {
       <Input
         style={{width: 200, marginRight: 20}}
         onChange={(e)=>{
-          setNumberValThousand(changeToThousand(inputOnlyNumber(e.target.value)))
+          setNumberValThousand(commUtils.changeToThousand(commUtils.inputOnlyNumber(e.target.value)))
         }}
         value={numberValThousand}
       />
@@ -45,14 +45,14 @@ const defaultComponent = () => {
       <Input
         style={{width: 200, marginRight: 20}}
         onChange={(e)=>{
-          setNumberValThousand(changeToThousand(inputOnlyNumber(e.target.value)))
+          setNumberValThousand(commUtils.changeToThousand(commUtils.inputOnlyNumber(e.target.value)))
         }}
         value={numberValThousand}
       />
       <Button
         type="primary"
         onClick={() => {
-          console.log("千位字符串转正常数字", stringToThousand(numberValThousand));
+          console.log("千位字符串转正常数字", commUtils.stringToThousand(numberValThousand));
         }}
       >
         点击在console查看
@@ -62,14 +62,14 @@ const defaultComponent = () => {
       <Input
         style={{width: 200, marginRight: 20}}
         onChange={(e)=>{
-          setNumberValMinu(inputOnlyNumber(e.target.value, 2, true))
+          setNumberValMinu(commUtils.inputOnlyNumber(e.target.value, 2, true))
         }}
         value={numberValMinu}
       />
       <Button
         type="primary"
         onClick={() => {
-          console.log("千位字符串转正常数字", stringToThousand(numberValMinu));
+          console.log("千位字符串转正常数字", commUtils.stringToThousand(numberValMinu));
         }}
       >
         点击在console查看
