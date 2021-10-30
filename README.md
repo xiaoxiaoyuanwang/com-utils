@@ -5,9 +5,9 @@
 
 ## 安装并引入组件
 ```
-npm install comm_utils -S
+npm install comm-utils -S
 
-import commUtils from "comm_utils";
+import commUtils from "comm-utils";
 ```
 
 ## 数组-字符串转换方法
